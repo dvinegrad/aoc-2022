@@ -11,4 +11,4 @@ for group in groups:
 print(total)
 
 # Code Golf
-print(sum(map(lambda c: ord(c) - 96 if c.islower() else ord(c) - 38, next(map(lambda lines: [next(iter(group[0] & group[1] & group[2])) for group in [[set(l) for l in lines[i:i+3]] for i in range(0, len(lines), 3)]], [open('input.txt').read().splitlines()])))))
+print(sum(map(lambda c: ord(c) - 96 if c.islower() else ord(c) - 38, next([next(iter(group[0] & group[1] & group[2])) for group in [[set(l) for l in lines[i:i+3]] for i in range(0, len(lines), 3)]] for lines in [open('input.txt').read().splitlines()]))))
