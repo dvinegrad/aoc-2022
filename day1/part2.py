@@ -1,0 +1,1 @@
+print(sum(sorted([sum([int(val) for val in elf.splitlines()]) for elf in open('input.txt').read().split('\n\n')])[-3:]))
