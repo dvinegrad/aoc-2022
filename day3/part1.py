@@ -6,8 +6,8 @@ import itertools
 total = 0
 
 for line in lines:
-    c1, c2 = set(list(line[0:len(line)//2])), set(list(line[len(line)//2:]))
-    common = list(c1.intersection(c2))[0]
+    c1, c2 = set(line[0:len(line)//2]), set(line[len(line)//2:])
+    common = next(iter(c1 & c2))
     total += ord(common) - 96 if common.islower() else ord(common) - 38
 
 print(total)
