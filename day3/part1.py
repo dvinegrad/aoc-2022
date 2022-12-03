@@ -10,5 +10,5 @@ for line in lines:
 
 print(total)
 
-
+# Code Golf
 print(sum(map(lambda c: ord(c) - 96 if c.islower() else ord(c) - 38, [next(iter(set(line[0:len(line)//2]).intersection(set(line[len(line)//2:])))) for line in open('input.txt').read().splitlines()])))
